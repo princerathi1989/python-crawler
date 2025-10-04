@@ -1,0 +1,16 @@
+# Sample sources configuration
+# This file can be used to override or add custom source configurations
+
+sources:
+  custom_source:
+    name: "Custom Source"
+    domain_tag: "stock_equity"
+    source_org: "CustomOrg"
+    start_urls:
+      - "https://example.com/documents"
+    allow_patterns:
+      - "example\\.com/.+\\.(pdf|csv|xlsx)$"
+    deny_patterns:
+      - "login|admin"
+    max_depth: 2
+    max_pages: 100
